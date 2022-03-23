@@ -2,13 +2,13 @@ Documentación del back-end robusto
 
 # Paquetes de instalación
 
-```npm i bcryptjs``` hash de las contraseñas
-```npm i cors``` conexiones a nuestro back
-```npm i dotenv```  (ya instalado)
-```npm i express``` (ya instalado)
-```npm i express-validator``` validaciones de la info entrante
-```npm i jsonwebtoken``` creacion de token de auth
-```npm i mongoose``` posibilita la conexión a mongo db atlas
+1. ```npm i bcryptjs``` hash de las contraseñas
+2. ```npm i cors``` conexiones a nuestro back
+3. ```npm i dotenv```  (ya instalado)
+4. ```npm i express``` (ya instalado)
+5. ```npm i express-validator``` validaciones de la info entrante
+6. ```npm i jsonwebtoken``` creacion de token de auth
+7. ```npm i mongoose``` posibilita la conexión a mongo db atlas
 
 # Crear database
 
@@ -32,3 +32,27 @@ Mirar archivos:
 # Definición de end points
 
 Mirar en eel archivo auth.js
+
+# Creacion de controllers
+
+Funciones que manejan el flujo del router
+
+# Creación de middlewares
+
+Sirven para serializar la entrada del request a JSON y eso poderlo trabajar
+
+# Express validators
+
+Para prevenir que llegue a controladores si no tiene los requisitos deseados en el body
+
+El middleware check no se encarga de bloquear la funcionalidad del controlador, lo que hace es que en req acumula todas las posibles validaciones para ser trabajadas desde el controlador.
+
+# Craer Usuario
+
+Al crear usuario en el controlador, verificar que este haya quedado en la coleccion deseada y no en test como esta por defecto
+
+Coleccion test( se crea por defecto)
+```DB_CNN_STRING=mongodb+srv://chat_main_user:nj9ztsbIM4d1Cngi@cluster0.p5lbz.mongodb.net```
+
+Coleccion chat db
+```DB_CNN_STRING=mongodb+srv://chat_main_user:nj9ztsbIM4d1Cngi@cluster0.p5lbz.mongodb.net/chatDB```
