@@ -56,3 +56,19 @@ Coleccion test( se crea por defecto)
 
 Coleccion chat db
 ```DB_CNN_STRING=mongodb+srv://chat_main_user:nj9ztsbIM4d1Cngi@cluster0.p5lbz.mongodb.net/chatDB```
+
+# Encriptar contraseña 
+
+Hash de una sola via, esot hace que inclusive para nostros sea imposible reconstruirla.
+
+# Generación jwt 
+
+Validez de la sesión del usuario. 
+
+HEADER / PAYLOAD/ FIRMA 
+
+Lo creo en el momento en que se crea un usuario y cuando hago el login
+
+# Genero middlewares para verificar JWT
+
+Si quiero inhabilitar los token creados simplemente cambio la public key
