@@ -4,25 +4,28 @@ class Sockets {
 
     constructor( io ) {
 
-        this.io = io;
+      this.io = io;
 
-        this.socketEvents();
+      this.socketEvents();
     }
 
     socketEvents() {
         // On connection
-        this.io.on('connection', ( socket ) => {
+      this.io.on('connection', ( socket ) => {
 
-            //TODO Validar JWT
-            //TODO Usuarios activos
-            //TODO Emitir usuarios conectados
-            //TODO Socket.join
-            //TODO Escuchar cuando cliente manda un mensaje
-            //TODO Disconnect en la base de datos flag
+          console.log('cliente conectado')
+          //TODO Validar JWT
+          //TODO Usuarios activos
+          //TODO Emitir usuarios conectados
+          //TODO Socket.join
+          //TODO Escuchar cuando cliente manda un mensaje
+          //TODO Disconnect en la base de datos flag
 
-            
-        
-        });
+          socket.on('disconnect', () => {
+            console.log('cliente desconectado')
+          })
+
+      });
     }
 
 
